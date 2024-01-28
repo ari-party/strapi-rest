@@ -6,6 +6,11 @@
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
+  "keywords": [
+    "strapi",
+    "rest",
+    "wrapper"
+  ],
   "files": [
     "dist"
   ],
