@@ -25,6 +25,8 @@ jobs:
         run: pnpm build
 
   publish:
+    permissions:
+      id-token: write
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -42,3 +44,4 @@ jobs:
         run: pnpm publish --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
