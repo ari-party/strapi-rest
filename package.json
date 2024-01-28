@@ -9,7 +9,10 @@
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/ari-party/strapi-rest",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ari-party/strapi-rest"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
