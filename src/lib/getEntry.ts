@@ -22,20 +22,16 @@ export interface GetEntryOptions extends BaseOptions {
  * ```ts
  * import { getEntry } from "strapi-rest"
  *
- * interface PostEntry {
- *   title: "Hello world"
- * }
- *
- * await getEntry<PostEntry>({
+ * await getEntry({
  *   apiUrl: "http://localhost:1337/api/",
  *   collection: "posts",
  *   id: "1"
  * })
  * ```
  */
-export async function getEntry<T>(
+export async function getEntry(
   options: GetEntryOptions,
-): Promise<Entry<T | Record<string, unknown>>> {
+): Promise<Entry<Record<string, unknown>>> {
   const response = await request({
     method: 'GET',
     url: combineUrl(
@@ -47,5 +43,5 @@ export async function getEntry<T>(
   });
 
   if (response.error) throw new Error(JSON.stringify(response.error));
-  return response.data as Entry<T | Record<string, unknown>>;
+  return response.data as Entry<Record<string, unknown>>;
 }

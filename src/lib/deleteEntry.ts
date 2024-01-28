@@ -29,9 +29,9 @@ export interface DeleteEntryOptions extends BaseOptions {
  * })
  * ```
  */
-export async function deleteEntry<T>(
+export async function deleteEntry(
   options: DeleteEntryOptions,
-): Promise<Entry<T | Record<string, unknown>>> {
+): Promise<Entry<Record<string, unknown>>> {
   const response = await request({
     method: 'DELETE',
     url: combineUrl(
@@ -43,5 +43,5 @@ export async function deleteEntry<T>(
   });
 
   if (response.error) throw new Error(JSON.stringify(response.error));
-  return response.data as Entry<T | Record<string, unknown>>;
+  return response.data as Entry<Record<string, unknown>>;
 }

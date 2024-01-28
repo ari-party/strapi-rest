@@ -28,9 +28,9 @@ export interface CreateEntryOptions extends BaseOptions {
  * })
  * ```
  */
-export async function createEntry<T>(
+export async function createEntry(
   options: CreateEntryOptions,
-): Promise<Entry<T | Record<string, unknown>>> {
+): Promise<Entry<Record<string, unknown>>> {
   const response = await request({
     method: 'POST',
     url: combineUrl(options.apiUrl, options.collection),
@@ -39,5 +39,5 @@ export async function createEntry<T>(
   });
 
   if (response.error) throw new Error(JSON.stringify(response.error));
-  return response.data as Entry<T | Record<string, unknown>>;
+  return response.data as Entry<Record<string, unknown>>;
 }
