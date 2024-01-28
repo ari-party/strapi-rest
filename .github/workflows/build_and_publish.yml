@@ -6,10 +6,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  publish:
+  build_and_publish:
     permissions:
       id-token: write
-    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
