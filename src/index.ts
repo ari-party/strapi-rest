@@ -1,6 +1,6 @@
 export * from './lib/createEntry.js';
 export * from './lib/deleteEntry.js';
-export * from './lib/getEntries';
+export * from './lib/getEntries.js';
 export * from './lib/getEntry.js';
 export * from './lib/updateEntry.js';
 
