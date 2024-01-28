@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "lib": ["dom"],
+    "esModuleInterop": false,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "module": "ESNext",
+    "allowJs": true,
+    "moduleResolution": "Bundler",
+    "outDir": "dist",
+    "rootDir": "src",
+  },
+  "typedocOptions": {
+    "entryPoints": ["src/index.ts"],
+    "out": "docs",
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"],
+}
