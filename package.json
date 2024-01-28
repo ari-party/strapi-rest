@@ -1,7 +1,7 @@
 {
   "name": "strapi-rest",
   "description": "Strapi REST API wrapper",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Astrid <git@astrid.email>",
   "license": "MIT",
   "type": "module",
