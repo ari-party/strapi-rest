@@ -19,7 +19,8 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier . -w",
     "fix": "eslint . --fix --quiet && prettier . -w",
-    "build": "tsc"
+    "build": "tsc",
+    "docs:build": "typedoc"
   },
   "dependencies": {
     "qs": "^6.11.2"
