@@ -1,9 +1,9 @@
 import type { BaseOptions } from '../types/baseFunction';
 import type { Entry } from '../types/entry';
 import combineUrl from '../utils/combineUrl.js';
-import request from '../utils/request.js';
+import { request } from '../utils/request.js';
 
-export interface Options extends BaseOptions {
+export interface GetEntryOptions extends BaseOptions {
   /**
    * The API ID of the collection type
    */
@@ -17,9 +17,22 @@ export interface Options extends BaseOptions {
 
 /**
  * @link https://docs.strapi.io/dev-docs/api/rest#get-an-entry
+ * @example ```ts
+ * import { getEntry } from "strapi-rest"
+ *
+ * interface PostEntry {
+ *   title: "Hello world"
+ * }
+ *
+ * await getEntry<PostEntry>({
+ *   apiUrl: "http://localhost:1337/api/",
+ *   collection: "posts",
+ *   id: "1"
+ * })
+ * ```
  */
-export default async function getEntry<T>(
-  options: Options,
+export async function getEntry<T>(
+  options: GetEntryOptions,
 ): Promise<Entry<T | Record<string, unknown>>> {
   const response = await request({
     method: 'GET',

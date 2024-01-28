@@ -1,7 +1,7 @@
 import type { BaseOptions } from '../types/baseFunction';
 import type { RequestResponse } from '../types/request';
 import combineUrl from '../utils/combineUrl.js';
-import request from '../utils/request.js';
+import { request } from '../utils/request.js';
 
 export interface Filters {
   /** Equal */
@@ -100,7 +100,7 @@ export interface Parameters {
   pagination?: Pagination;
 }
 
-export interface Options extends BaseOptions {
+export interface GetEntriesOptions extends BaseOptions {
   /**
    * The API ID of the collection type
    */
@@ -111,9 +111,26 @@ export interface Options extends BaseOptions {
 
 /**
  * @link https://docs.strapi.io/dev-docs/api/rest#get-entries
+ * @example ```ts
+ * import { getEntries } from "strapi-rest"
+ *
+ * interface PostEntry {
+ *   title: "Hello world"
+ * }
+ *
+ * await getEntries<PostEntry>({
+ *   apiUrl: "http://localhost:1337/api/",
+ *   collection: "posts",
+ *   parameters: {
+ *     pagination: {
+ *       limit: -1
+ *     }
+ *   }
+ * })
+ * ```
  */
-export default async function getEntries<T>(
-  options: Options,
+export async function getEntries<T>(
+  options: GetEntriesOptions,
 ): Promise<RequestResponse<Array<T | Record<string, unknown>>>> {
   const response = await request({
     method: 'GET',

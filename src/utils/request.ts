@@ -11,7 +11,7 @@ export interface RequestOptions {
   token?: string;
 }
 
-export default async function request<T>(
+export async function request<T>(
   options: RequestOptions,
 ): Promise<RequestResponse<T>> {
   let { url } = options;
