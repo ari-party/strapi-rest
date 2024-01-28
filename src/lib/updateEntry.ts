@@ -1,7 +1,8 @@
-import type { BaseOptions } from '../types/baseFunction';
-import type { Entry } from '../types/entry';
 import combineUrl from '../utils/combineUrl.js';
 import { request } from '../utils/request.js';
+
+import type { BaseOptions } from '../types/baseFunction';
+import type { Entry } from '../types/entry';
 
 export interface UpdateEntryOptions extends BaseOptions {
   /**
