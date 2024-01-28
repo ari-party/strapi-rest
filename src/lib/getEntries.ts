@@ -111,7 +111,9 @@ export interface GetEntriesOptions extends BaseOptions {
 
 /**
  * @link https://docs.strapi.io/dev-docs/api/rest#get-entries
- * @example ```ts
+ *
+ * @example
+ * ```ts
  * import { getEntries } from "strapi-rest"
  *
  * interface PostEntry {

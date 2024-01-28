@@ -14,7 +14,9 @@ export interface CreateEntryOptions extends BaseOptions {
 
 /**
  * @link https://docs.strapi.io/dev-docs/api/rest#create-an-entry
- * @example ```ts
+ *
+ * @example
+ * ```ts
  * import { createEntry } from "strapi-rest"
  *
  * await createEntry({

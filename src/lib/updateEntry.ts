@@ -14,7 +14,9 @@ export interface UpdateEntryOptions extends BaseOptions {
 
 /**
  * @link https://docs.strapi.io/dev-docs/api/rest#update-an-entry
- * @example ```ts
+ *
+ * @example
+ * ```ts
  * import { updateEntry } from "strapi-rest"
  *
  * await updateEntry({

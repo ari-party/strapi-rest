@@ -17,7 +17,9 @@ export interface DeleteEntryOptions extends BaseOptions {
 
 /**
  * @link https://docs.strapi.io/dev-docs/api/rest#get-an-entry
- * @example ```ts
+ *
+ * @example
+ * ```ts
  * import { deleteEntry } from "strapi-rest"
  *
  * await deleteEntry({
