@@ -5,7 +5,7 @@
 
 A Strapi REST API wrapper built upon the global [`fetch`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) API
 
-You can find documentation [here](https://ari-party.github.io/strapi-rest/index.html)
+You can find the documentation [here](https://ari-party.github.io/strapi-rest/index.html).
 
 ## Installation
 
