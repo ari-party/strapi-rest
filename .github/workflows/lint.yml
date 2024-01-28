@@ -6,7 +6,7 @@ on:
 
 jobs:
   linting:
-    name: Run Linters
+    name: Lint code
     runs-on: ubuntu-latest
 
     steps:
