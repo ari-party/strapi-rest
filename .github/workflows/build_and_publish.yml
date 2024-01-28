@@ -27,7 +27,7 @@ jobs:
       - name: Build
         run: pnpm build
       - name: Publish
-        run: pnpm publish --no-git-checks --registry="https://npm.pkg.github.com/"
+        run: pnpm publish --no-git-checks --registry="https://npm.pkg.github.com/" --access="public"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
