@@ -14,5 +14,5 @@ $ npm install strapi-rest
 # or
 $ yarn install strapi-rest
 # or
-$ npm add strapi-rest
+$ pnpm add strapi-rest
 ```
